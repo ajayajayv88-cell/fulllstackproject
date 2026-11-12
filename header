@@ -1,0 +1,19 @@
+from collections import deque
+tickets = deque()
+
+ def raise_ticket(t):
+     tickets.append(t)        #enqueue
+     print("Raised:", t)
+    
+def serve():
+        if tickets():
+            print("Serving:", tickets.popleft())   #dequeue
+        else: 
+             print("No tickets")
+                
+raise_tickets("T1 : login issues")
+raise_tickets("T2 : paymentfailed")
+raise_tickets("t3 : password reset")
+serve()
+serve()
+ print("Waiting:", list (tickets))
